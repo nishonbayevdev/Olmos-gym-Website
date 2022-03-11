@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block temp %}
+
+    <!-- Breadcrumb Section Begin -->
+    <section class="breadcrumb-section set-bg" data-setbg="{% static 'img/servises2.png' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Services</h2>
+                        <div class="bt-option">
+                            <a href="./index.html">Home</a>
+                            <span>Services</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<div class="contact-widget">
+                        <div class="cw-text">
+                            <i class="fa fa-map-marker"></i>
+                            <br>
+                            <br>
+                            <br>
+                            <h2 class=" text-white">Bahtiyor</h2>
+                            <li class="text-white">90 796 77 77</li>
+                            <h2 class="text-white">Qahramon</h2>
+                            <li class="text-white">94 505 67 76</li>
+                        </div>                <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <a href="{% url 'contact' %}"> <i class="fa fa-map-marker"></i></a>
+                        <p>joyilashuvi</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>Olmos@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+    <!-- Breadcrumb Section End -->
+
+
+{%endblock%}

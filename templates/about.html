@@ -1,0 +1,193 @@
+{%extends 'base.html' %}
+{% load static %}
+{% block temp %}
+    <section class="breadcrumb-section set-bg" data-setbg="{% static 'img/olmos.png' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>About us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aboutus-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="about-video set-bg" data-setbg="{%static 'img/about-us.jpg'%}">
+                            <video class="img-fluid" controls="controls" style="width:100%;height:100%;">
+                                <source src="{{video.video.url}}" type="video/mp4">
+                            </video>
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="about-text">
+                        <div class="section-title">
+                            <span>About Us</span>
+                            <h2>What we have done</h2>
+                        </div>
+                        <div class="at-desc">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
+                                viverra maecenas accumsan lacus vel facilisis. aliquip ex ea commodo consequat sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        </div>
+                        <div class="about-bar">
+                            <div class="ab-item">
+                                <p>Body building</p>
+                                <div id="bar1" class="barfiller">
+                                    <span class="fill" data-percentage="80"></span>
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab-item">
+                                <p>Training</p>
+                                <div id="bar2" class="barfiller">
+                                    <span class="fill" data-percentage="85"></span>
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ab-item">
+                                <p>Fitness</p>
+                                <div id="bar3" class="barfiller">
+                                    <span class="fill" data-percentage="75"></span>
+                                    <div class="tipWrap">
+                                        <span class="tip"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About US Section End -->
+
+    <!-- Team Section Begin -->
+    <section class="team-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="team-title">
+                        <div class="section-title">
+                            <span>Our Team</span>
+                            <h2>TRAIN WITH EXPERTS</h2>
+                        </div>
+                        <a href="#" class="primary-btn btn-normal appoinment-btn">appointment</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="ts-slider owl-carousel">
+                     {% for employe in employes %}
+                        <div class="col-lg-4">
+                            <div class="ts-item set-bg" data-setbg="{{employe.image.url}}">
+                                <div class="ts_text">
+                                    <h4>{{employe.name}}</h4>
+                                    <span>{{employe.position}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section End -->
+
+    <!-- Banner Section Begin -->
+    <section class="banner-section set-bg" data-setbg="img/banner-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="bs-text">
+                        <h2>registration now to get more deals</h2>
+                        <div class="bt-tips">Where health, beauty and fitness meet.</div>
+                        <a href="#" class="primary-btn  btn-normal">Appointment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- Testimonial Section Begin -->
+    <section class="testimonial-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Testimonial</span>
+                        <h2>Our cilent say</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="ts_slider owl-carousel">
+                {% for i in client%}
+                    <div class="ts_item">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <div class="ti_pic">
+                                <img src="{{ i.avatar.url }}" alt="sssss">
+                            </div>
+                            <div class="ti_text">
+                                <p>{{i.desc}}</p>
+                                <h5>{{i.name}}</h5>
+                                <div class="tt-rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- Get In Touch Section Begin -->
+    <div class="contact-widget">
+                        <div class="cw-text">
+                            <i class="fa fa-map-marker"></i>
+                            <br>
+                            <br>
+                            <br>
+                            <h2 class=" text-white">Bahtiyor</h2>
+                            <li class="text-white">90 796 77 77</li>
+                            <h2 class="text-white">Qahramon</h2>
+                            <li class="text-white">94 505 67 76</li>
+                        </div>                <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <a href="{% url 'contact' %}"> <i class="fa fa-map-marker"></i></a>
+                        <p>joyilashuvi</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>Olmos@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            </div>
+{% endblock %}
